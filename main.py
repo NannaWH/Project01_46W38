@@ -15,7 +15,7 @@ def power_calc(v, p_rated=15, v_in = 3, v_ratd = 11, v_out = 25, interpol = "lin
         if not isinstance(value, (int, float)): 
             raise ValueError(f"Invalid input: {value} is not a number")  
     
-    if not interpol == "linear" or interpol == "cubic":
+    if (interpol != "linear") and (interpol != "cubic"):
         raise ValueError(f"Invalid input: {interpol}. Interpolation should be either 'linear' or 'cubic'.")  
 
     # We define g(v) based on linear or cubic interpolation assumption
