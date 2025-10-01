@@ -6,7 +6,18 @@
 
 ## We define a function for the power curve
 def power_calc(v, p_rated=15, v_in = 3, v_ratd = 11, v_out = 25, interpol = "linear"):
-    """We define a function that calculates power output based on user inputs"""
+    
+    """ We define a function that calculates power output based on user inputs:
+    
+    User input:
+    v = wind speed,
+    p_rated = rated power [MW] of the turbine,
+    v_in = cut-in wind speed [m/s] that denotes the minimal wind speed the turbine starts to generate power,
+    v_ratd = rated wind speed [m/s] that denotes the wind speed the turbine reaches the rated power,
+    v_out = cut-out wind speed [m/s] that denotes the wind speed the turbine stops generating power.
+    interpol = interpolation method (linear or cubic)
+
+    """
     
     # We check for errors in user input and raise errors if any
     inputs = {'v': v, 'p_rated': p_rated, 'v_in': v_in, 'v_ratd': v_ratd, 'v_out': v_out}
